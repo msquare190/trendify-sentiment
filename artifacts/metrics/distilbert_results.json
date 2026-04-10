@@ -1,0 +1,84 @@
+{
+    "model_name": "distilbert-base-multilingual-cased",
+    "training_date": "2026-04-06 18:55:33",
+    "device": "cpu",
+    "num_epochs": 3,
+    "batch_size": 16,
+    "learning_rate": 2e-05,
+    "max_length": 128,
+    "dataset_info": {
+        "total_samples": 30000,
+        "train_samples": 24000,
+        "test_samples": 6000,
+        "num_classes": 3,
+        "classes": [
+            "negative",
+            "neutral",
+            "positive"
+        ]
+    },
+    "performance": {
+        "test_loss": 2.382642724357235e-05,
+        "test_accuracy": 1.0,
+        "test_f1_macro": 1.0,
+        "per_class_precision": [
+            1.0,
+            1.0,
+            1.0
+        ],
+        "per_class_recall": [
+            1.0,
+            1.0,
+            1.0
+        ],
+        "per_class_f1": [
+            1.0,
+            1.0,
+            1.0
+        ]
+    },
+    "confusion_matrix": [
+        [
+            2000,
+            0,
+            0
+        ],
+        [
+            0,
+            2000,
+            0
+        ],
+        [
+            0,
+            0,
+            2000
+        ]
+    ],
+    "training_history": {
+        "train_loss": [
+            0.13048867391905514,
+            0.0011115979293026613,
+            0.00033074456203879284
+        ],
+        "train_acc": [
+            0.9471666666666667,
+            0.9997916666666666,
+            0.9999166666666667
+        ],
+        "val_loss": [
+            0.00017903706208259487,
+            6.350392161402852e-05,
+            2.382642724357235e-05
+        ],
+        "val_acc": [
+            1.0,
+            1.0,
+            1.0
+        ],
+        "val_f1": [
+            1.0,
+            1.0,
+            1.0
+        ]
+    }
+}

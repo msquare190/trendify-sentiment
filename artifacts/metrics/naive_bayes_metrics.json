@@ -1,0 +1,23 @@
+{
+    "model_name": "MultinomialNB",
+    "accuracy": 1.0,
+    "f1_macro": 1.0,
+    "f1_weighted": 1.0,
+    "confusion_matrix": [
+        [
+            2000,
+            0,
+            0
+        ],
+        [
+            0,
+            2000,
+            0
+        ],
+        [
+            0,
+            0,
+            2000
+        ]
+    ]
+}

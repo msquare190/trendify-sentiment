@@ -1,0 +1,8 @@
+0: Electronics
+1: Fashion
+2: Food & Grocery
+3: Home & Living
+4: Toys
+5: Books
+6: Beauty
+7: Sports
