@@ -25,6 +25,7 @@ import nltk
 warnings.filterwarnings("ignore")
 
 
+
 # -----------------------------
 # Paths (assumes app.py is inside /dashboard)
 # -----------------------------
@@ -106,18 +107,20 @@ def load_artifacts():
     if LR_MODEL_PATH.exists():
         artifacts["sklearn_models"]["Logistic Regression"] = joblib.load(LR_MODEL_PATH)
 
-    if DISTILBERT_MODEL_DIR.exists() and DISTILBERT_TOKENIZER_DIR.exists():
+    try:
         distilbert_model = DistilBertForSequenceClassification.from_pretrained(
-            DISTILBERT_MODEL_DIR
+            "msquare190/trendify-distilbert"
         ).to(artifacts["device"])
         distilbert_model.eval()
 
         distilbert_tokenizer = DistilBertTokenizer.from_pretrained(
-            DISTILBERT_TOKENIZER_DIR
+            "msquare190/trendify-distilbert"
         )
 
         artifacts["distilbert_model"] = distilbert_model
         artifacts["distilbert_tokenizer"] = distilbert_tokenizer
+    except Exception:
+        pass
 
     return artifacts
 
@@ -806,7 +809,6 @@ def main():
 
 if __name__ == "__main__":
     main()
-
 
 
 
