@@ -549,6 +549,9 @@ def predict_distilbert(text, model, tokenizer, device="cpu"):
 
     class_labels = get_distilbert_labels(model, len(probs))
     pred_label = class_labels[pred_idx] if pred_idx < len(class_labels) else str(pred_idx)
+    
+    import streamlit as st
+    st.write(f"DEBUG: pred_idx={pred_idx}, class_labels={class_labels}, pred_label={pred_label}")
 
     prob_df = pd.DataFrame(
         {
