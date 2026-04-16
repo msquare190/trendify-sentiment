@@ -109,13 +109,12 @@ def load_artifacts():
 
     try:
         distilbert_model = DistilBertForSequenceClassification.from_pretrained(
-            "msquare190/trendify-distilbert",
-            force_download=True
+            str(DISTILBERT_MODEL_DIR)
         ).to(artifacts["device"])
         distilbert_model.eval()
 
         distilbert_tokenizer = DistilBertTokenizer.from_pretrained(
-            "msquare190/trendify-distilbert"
+            str(DISTILBERT_TOKENIZER_DIR)
         )
 
         artifacts["distilbert_model"] = distilbert_model
