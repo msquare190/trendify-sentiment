@@ -84,7 +84,7 @@ def load_raw_data(path: Path) -> pd.DataFrame:
     return df
 
 
-@st.cache_resource
+@st.cache_resource(show_spinner="Loading models...")
 def load_artifacts():
     artifacts = {
         "vectorizer": None,
