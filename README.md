@@ -3,7 +3,7 @@
 A Streamlit web app for analysing and predicting customer review sentiment across multiple languages using machine learning and transformer models.
 
 ## Live Demo
-🚀 Deployed on [Streamlit Cloud]([https://streamlit.io/cloud](https://trendify-sentiment-zcezfpsutw6vstznbfmtvd.streamlit.app))
+🚀 Deployed on [Streamlit Cloud] https://trendify-sentiment-zcezfpsutw6vstznbfmtvd.streamlit.app
 
 ---
 
