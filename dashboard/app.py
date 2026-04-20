@@ -52,7 +52,7 @@ DISTILBERT_TOKENIZER_DIR = TOKENIZERS_DIR / "distilbert_tokenizer"
 # Constants
 # -----------------------------
 SENTIMENT_ORDER = ["positive", "neutral", "negative"]
-SENTIMENT_COLORS = {"positive": "green", "neutral": "blue", "negative": "red"}
+SENTIMENT_COLORS = {"positive": "green", "neutral": "gray", "negative": "red"}
 
 
 # -----------------------------
