@@ -32,7 +32,7 @@ warnings.filterwarnings("ignore")
 APP_DIR = Path(__file__).resolve().parent
 PROJECT_ROOT = APP_DIR.parent
 
-DATA_PATH = PROJECT_ROOT / "data" / "raw" / "raw_reviews.csv"
+DATA_PATH = PROJECT_ROOT / "data" / "processed" / "processed_reviews.csv"
 
 ARTIFACTS_DIR = PROJECT_ROOT / "artifacts"
 MODELS_DIR = ARTIFACTS_DIR / "models"
@@ -52,7 +52,7 @@ DISTILBERT_TOKENIZER_DIR = TOKENIZERS_DIR / "distilbert_tokenizer"
 # Constants
 # -----------------------------
 SENTIMENT_ORDER = ["positive", "neutral", "negative"]
-SENTIMENT_COLORS = {"positive": "green", "neutral": "gray", "negative": "red"}
+SENTIMENT_COLORS = {"positive": "green", "neutral": "blue", "negative": "red"}
 
 
 # -----------------------------
@@ -565,7 +565,7 @@ def predict_distilbert(text, model, tokenizer, device="cpu"):
 # -----------------------------
 def page_dashboard(df: pd.DataFrame):
     st.title("Trendify Global — Sentiment Dashboard")
-    st.caption("Data source: /data/raw/raw_reviews.csv")
+    st.caption("Data source: /data/processed/processed_reviews.csv")
 
     with st.sidebar:
         st.subheader("Filters")
